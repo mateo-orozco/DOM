@@ -45,33 +45,26 @@ if (re.test(container.textContent)) {
 }
 
 boton.addEventListener("click", () => {
-    container.innerHTML = `<div class="tarjeta" id="tarjeta">
+    container.innerHTML += `<div class="tarjeta" id="tarjeta">
                     <h2> Modelo</h2 >
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, sint!</p>
-                    <button id="delete">DELETE</button>
+                    <button id="delete" onclick="eliminar(this)">DELETE</button>
                 </div >`
 
 
 
 })
-
-if(re.test(container.textContent)){
-    
+function eliminar(elemento){
+    elemento.parentElement.remove()
 }
-    boton.addEventListener("click", (e) => {
-        container.innerHTML += `<div class="tarjeta" id="tarjeta">
-                    <h2> Modelo2</h2 >
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, sint!</p>
-                    <button id="delete">DELETE</button>
-                </div >`
 
+// if(re.test(container.textContent)){
 
-
-    })
-
-    let borrar = document.getElementById("delete")
-    borrar.addEventListener("click", (e) => {
-        container.removeChild(e)
-    })
+//     let borrar = document.getElementById("delete")
+//     borrar.addEventListener("click", (e) => {
+//         container.removeChild(e)
+//     })
+// }
+    
 
 
